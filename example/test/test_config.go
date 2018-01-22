@@ -1,11 +1,11 @@
-package main
+package test
 
 import(
 	"fmt"
 	"igo/conf"
 )
 
-func main(){
+func config_test(){
 	config,err := conf.NewConfig("ini", "config/app.config")
 	if err != nil{
 		fmt.Println(err.Error())
