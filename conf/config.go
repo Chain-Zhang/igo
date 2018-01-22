@@ -16,9 +16,13 @@ type Config interface{
 }
 
 func NewConfig(adapter, filename string) (Config, error){
+	path, err := GetCurrentPath(filename)
+	if err != nil{
+		return nil, err
+	}
 	switch adapter{
 	case "ini":
-		return GetIniConfig(filename)
+		return GetIniConfig(path)
 	default:
 		return nil, errors.New("系统暂未处理该类型的配置文件")
 	}

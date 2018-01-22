@@ -15,15 +15,11 @@ type IniConfig struct{
 }
 
 func GetIniConfig(filename string)(*IniConfig, error){
-	path , err := GetCurrentPath(filename)
-	if err != nil{
-		return nil, err
-	}
 	middle := "."
 	config :=  new(IniConfig)
 	config.ConfigMap = make(map[string]string)
 	//打开文件
-	file, err := os.Open(path)
+	file, err := os.Open(filename)
 	if err != nil{
 		return nil, err
 	}
