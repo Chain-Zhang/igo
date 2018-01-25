@@ -1,0 +1,13 @@
+[Info]2018/01/25 17:50:20 app log ingo
+[Warn]2018/01/25 17:50:20 app log warn
+[Error]2018/01/25 17:50:20 app log error
+[Info]2018/01/25 17:50:33 app log ingo
+[Warn]2018/01/25 17:50:33 app log warn
+[Error]2018/01/25 17:50:33 app log error
+[Info]2018/01/25 17:51:05 app log ingo
+[Warn]2018/01/25 17:51:05 app log warn
+[Fatal]2018/01/25 17:51:05 fatal
+[Warn]2018/01/25 17:51:44 app log warn message
+[Info]2018/01/25 17:51:44 app log info message
+[Error]2018/01/25 17:51:44 app log error message
+[Fatal]2018/01/25 17:51:44 app log fatal message

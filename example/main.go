@@ -5,5 +5,5 @@ import(
 )
 
 func main(){
-	test.Security_test()
+	test.TestLog()
 }

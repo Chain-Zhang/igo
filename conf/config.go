@@ -7,12 +7,18 @@ import (
 	"path/filepath"
 )
 
+var AppConfig Config
+
 type Config interface{
 	GetString(string) string
 	GetInt(string)(int, error)
 	GetInt64(string)(int64, error)
 	GetFloat(string)(float64, error)
 	GetBool(string)(bool, error)
+}
+
+func init(){
+	AppConfig,_ = NewConfig("ini", "config/app.config")
 }
 
 func NewConfig(adapter, filename string) (Config, error){
