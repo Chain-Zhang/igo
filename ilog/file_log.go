@@ -16,11 +16,8 @@ var(
 	file_write_mutex *sync.Mutex
 )
 
-
-
 type FileLog struct{
 	level int
-	mode string
 }
 
 func newFileLog(log_level int) (*FileLog){
