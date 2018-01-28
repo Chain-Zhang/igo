@@ -6,11 +6,11 @@ import(
 )
 
 func TestLog(){
-	ilog.AppLog.Debug("app log debug message")
-	ilog.AppLog.Info("app log info message")
-	ilog.AppLog.Warn("app log warn message")
-	ilog.AppLog.Error("app log error message")
-	ilog.AppLog.Fatal("app log fatal message")
+	ilog.Debug("app log debug message")
+	ilog.Info("app log info message")
+	ilog.Warn("app log warn message")
+	ilog.Error("app log error message")
+	ilog.Fatal("app log fatal message")
 
 	var str string
 	fmt.Scan(&str)

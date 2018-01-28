@@ -53,8 +53,8 @@ func (self *FileLog)getWriter()(*os.File, error){
 	return writer, nil
 }
 
-func (self *FileLog) Debug(v ...interface{}){
-	if self.level <= Debug{
+func (self *FileLog) debug(v ...interface{}){
+	if self.level <= Level_Debug{
 		go func(){
 			file_write_mutex.Lock()
 			defer file_write_mutex.Unlock()
@@ -69,8 +69,8 @@ func (self *FileLog) Debug(v ...interface{}){
 	}
 }
 
-func (self *FileLog) Debugf(format string,v ...interface{}){
-	if self.level <= Info{
+func (self *FileLog) debugf(format string,v ...interface{}){
+	if self.level <= Level_Debug{
 		go func(){
 			file_write_mutex.Lock()
 			defer file_write_mutex.Unlock()
@@ -85,8 +85,8 @@ func (self *FileLog) Debugf(format string,v ...interface{}){
 	}
 }
 
-func (self *FileLog) Info(v ...interface{}){
-	if self.level <= Info{
+func (self *FileLog) info(v ...interface{}){
+	if self.level <= Level_Info{
 		go func(){
 			file_write_mutex.Lock()
 			defer file_write_mutex.Unlock()
@@ -101,8 +101,8 @@ func (self *FileLog) Info(v ...interface{}){
 	}
 }
 
-func (self *FileLog) Infof(format string,v ...interface{}){
-	if self.level <= Info{
+func (self *FileLog) infof(format string,v ...interface{}){
+	if self.level <= Level_Info{
 		go func(){
 			file_write_mutex.Lock()
 			defer file_write_mutex.Unlock()
@@ -117,8 +117,8 @@ func (self *FileLog) Infof(format string,v ...interface{}){
 	}
 }
 
-func (self *FileLog) Error(v ...interface{}){
-	if self.level <= Error{
+func (self *FileLog) error(v ...interface{}){
+	if self.level <= Level_Error{
 		go func(){
 			file_write_mutex.Lock()
 			defer file_write_mutex.Unlock()
@@ -133,8 +133,8 @@ func (self *FileLog) Error(v ...interface{}){
 	}
 }
 
-func (self *FileLog) Errorf(format string,v ...interface{}){
-	if self.level <= Error{
+func (self *FileLog) errorf(format string,v ...interface{}){
+	if self.level <= Level_Error{
 		go func(){
 			file_write_mutex.Lock()
 			defer file_write_mutex.Unlock()
@@ -149,8 +149,8 @@ func (self *FileLog) Errorf(format string,v ...interface{}){
 	}
 }
 
-func (self *FileLog) Warn(v ...interface{}){
-	if self.level <= Warn{
+func (self *FileLog) warn(v ...interface{}){
+	if self.level <= Level_Warn{
 		go func(){
 			file_write_mutex.Lock()
 			defer file_write_mutex.Unlock()
@@ -165,8 +165,8 @@ func (self *FileLog) Warn(v ...interface{}){
 	}
 }
 
-func (self *FileLog) Warnf(format string,v ...interface{}){
-	if self.level <= Warn{
+func (self *FileLog) warnf(format string,v ...interface{}){
+	if self.level <= Level_Warn{
 		go func(){
 			file_write_mutex.Lock()
 			defer file_write_mutex.Unlock()
@@ -181,8 +181,8 @@ func (self *FileLog) Warnf(format string,v ...interface{}){
 	}
 }
 
-func (self *FileLog) Fatal(v ...interface{}){
-	if self.level <= Fatal{
+func (self *FileLog) fatal(v ...interface{}){
+	if self.level <= Level_Fatal{
 		go func(){
 			file_write_mutex.Lock()
 			defer file_write_mutex.Unlock()
@@ -197,8 +197,8 @@ func (self *FileLog) Fatal(v ...interface{}){
 	}
 }
 
-func (self *FileLog) Fatalf(format string,v ...interface{}){
-	if self.level <= Fatal{
+func (self *FileLog) fatalf(format string,v ...interface{}){
+	if self.level <= Level_Fatal{
 		go func(){
 			file_write_mutex.Lock()
 			defer file_write_mutex.Unlock()
