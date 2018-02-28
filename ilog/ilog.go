@@ -2,7 +2,7 @@ package ilog
 
 import (
 	"errors"
-	"igo/conf"
+	"github.com/Chain-Zhang/igo/conf"
 )
 
 var appLog ILog
